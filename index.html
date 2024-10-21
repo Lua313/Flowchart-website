@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de"> <!-- Change to German language -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechnungsversand Flowchart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Rechnungsversand Flowchart</h1>
+    <div id="flowchart">
+        <!-- First Step -->
+        <div class="step" id="step1">
+            <p>Rechnungsversand - Ist in der Notiz 1 oder zwei ein Kommentar zum Versand oder Firmenkartei hinzugefügt?</p>
+            <button onclick="decision('yes')">Ja</button>
+            <button onclick="decision('no')">Nein</button>
+        </div>
+
+        <!-- Arrow between steps -->
+        <div class="arrow" id="arrow1" style="display: none;">&#8595;</div>
+
+        <!-- Second Step (hidden at first) -->
+        <div class="step" id="step2" style="display:none;">
+            <p>Firmenkartei kontrollieren Fenster B - Rechnung versenden Fenster B</p>
+        </div>
+
+        <!-- Arrow between steps -->
+        <div class="arrow" id="arrow2" style="display: none;">&#8595;</div>
+
+        <!-- Follow-up Question (hidden) -->
+        <div class="step" id="followup1" style="display:none;">
+            <p>Ist die richtige Kartei verknüpft?</p>
+            <button onclick="decision2('yes')">Ja</button>
+            <button onclick="decision2('no')">Nein</button>
+        </div>
+
+        <!-- Arrow for follow-up (hidden) -->
+        <div class="arrow" id="arrow3" style="display: none;">&#8595;</div>
+
+        <!-- Email question (hidden) -->
+        <div class="step" id="emailQuestion" style="display:none;">
+            <p>An welche Emailadresse versenden?</p>
+            <button onclick="finish()">Fertig</button>
+        </div>
+
+        <!-- Arrow for final step (hidden) -->
+        <div class="arrow" id="arrow4" style="display: none;">&#8595;</div>
+
+        <!-- Change recipient (hidden) -->
+        <div class="step" id="changeRecipient" style="display:none;">
+            <p>Rechnungsumpfänger Fenster B ändern und die richtige Datei verknüpfen.</p>
+            <button onclick="finish()">Fertig</button>
+        </div>
+
+        <!-- Option C (hidden) -->
+        <div class="step" id="optionC" style="display:none;">
+            <p>Rechnung laut Kommentar zur Privatadresse senden.</p>
+            <button onclick="finish()">Fertig</button>
+        </div>
+
+        <!-- Final Result (hidden at first) -->
+        <div class="result" id="result" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

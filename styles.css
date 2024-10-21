@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f4f8; /* Light neutral background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Georgia', serif; /* More formal font for the title */
+    font-size: 2.5em;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+#flowchart {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.step, .result {
+    border: 2px solid #2C3E50;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 5px;
+    background-color: #ecf0f1; /* Soft background inside the flowchart */
+    color: #2C3E50;
+    width: 300px; /* Fixed width for all steps */
+}
+
+.arrow {
+    font-size: 2em; /* Size of the arrow */
+    color: #2C3E50; /* Arrow color */
+    margin: -10px auto; /* Adjust margin to align with steps */
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #3498db; /* A formal-looking blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Additional styles for improved spacing and alignment */
+.step {
+    display: inline-block; /* Allow inline-block for horizontal alignment */
+    text-align: center; /* Center text in steps */
+}
+
+.result {
+    display: inline-block;
+    margin-top: 20px; /* Add space above the result */
+}
+
+
